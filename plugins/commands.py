@@ -9,7 +9,7 @@ from instaloader import Profile
 from pyrogram import Client, filters
 from config import Config
 
-chat_idd = Config.chat_idd
+chat_idd = int(Config.chat_idd)
 USER = Config.USER
 OWNER = Config.OWNER
 HOME_TEXT = Config.HOME_TEXT
