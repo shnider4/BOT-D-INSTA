@@ -4,7 +4,7 @@ from pyrogram import Client, idle
 from pyromod import listen
 from config import Config
 STATUS=Config.STATUS
-chatid = Config.OWNER
+chatid = int(Config.OWNER)
 USER=Config.USER
 bot = Client(
     "InstaSessibon",
@@ -31,19 +31,19 @@ bot.send(
         commands=[
             types.BotCommand(
                 command="start",
-                description="Check if bot alive"
+                description="فحص البوت "
             ),
             types.BotCommand(
                 command="help",
-                description="How to use"),
+                description="مساعدة "),
 
             types.BotCommand(
                 command="saved",
-                description="Download specified number of posts from your saved posts "),
+                description="تحميل المنشورات الى القناة"),
 
             types.BotCommand(
                 command="restart",
-                description="Stop all processes and restart bot"
+                description="اعادة تشغيل البوت "
             ),
         ]
     )
